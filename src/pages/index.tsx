@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next';
-import { getTenExchangeList } from '../lib/exchange';
-import HomePage from '../views/HomePage';
+import { getTenExchangeList } from '@/lib/exchange';
+import HomePage from '@/views/HomePage';
 
 export default HomePage;
 
