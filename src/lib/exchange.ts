@@ -2,7 +2,7 @@ const BASE_URL = 'https://api.coingecko.com/api/v3/exchanges';
 
 export const getTenExchangeList = async (pageNumber: number) => {
   const exchangeListResponse = await fetch(
-    `${BASE_URL}?per_page=10&page=${pageNumber.toString()}`
+    `${BASE_URL}?per_page=10&page=${pageNumber}`
   );
   const exchangeList = await exchangeListResponse.json();
   return exchangeList;
