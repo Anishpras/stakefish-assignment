@@ -1,8 +1,11 @@
 import React from 'react';
 
-type Props = {};
+type IProps = {
+  exchangeListData: object[];
+};
 
-const HomePage = (props: Props) => {
+const HomePage = ({ exchangeListData }: IProps) => {
+  console.log(exchangeListData);
   return <div>HomePage</div>;
 };
 
