@@ -20,8 +20,8 @@ function SingleExchangeMolecule({
   singleExchange: { id, name, country, url, image, trust_score_rank },
 }: IProps) {
   return (
-    <Link href={`/exchange/${id}`}>
-      <div className="hover:cursor-pointer flex h-full w-full rounded-md border border-dashed border-black bg-gray-300 bg-opacity-30 p-4">
+    <a href={`/exchange/${id}`} target="_blank" rel="noreferrer noopener">
+      <div className="flex h-full w-full rounded-md border border-dashed border-black bg-gray-300 bg-opacity-30 p-4 hover:cursor-pointer">
         <div className="flex flex-col items-center justify-center">
           <p>Rank</p>
           <div className="border-r-2  border-black p-4">
@@ -82,7 +82,7 @@ function SingleExchangeMolecule({
           </div>
         </div>
       </div>
-    </Link>
+    </a>
   );
 }
 

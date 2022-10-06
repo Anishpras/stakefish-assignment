@@ -1,5 +1,5 @@
 import SingleExchange from '@/components/organisms/SingleExchange';
-import SingleExchangeMolecule from '@/componentsmolecules/SingleExchangeMolecule';
+import SingleExchangeMolecule from '@/components/molecules/SingleExchangeMolecule';
 import React from 'react';
 
 type IProps = {
