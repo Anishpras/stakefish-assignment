@@ -53,7 +53,7 @@ function SingleExchangeMolecule({
         <div className="flex md:w-56 md:flex-col items-center justify-center">
           <p>Country</p>
           <div className="p-7">
-            <p>{country === null ? `Not Available` : `${country}`}</p>
+            <p className='text-center'>{country === null ? `Not Available` : `${country}`}</p>
           </div>
         </div>
         <div className="flex md:flex-col items-center justify-center">

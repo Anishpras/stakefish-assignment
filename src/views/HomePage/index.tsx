@@ -1,6 +1,7 @@
 import SingleExchange from '@/components/organisms/SingleExchange';
 import SingleExchangeMolecule from '@/components/molecules/SingleExchangeMolecule';
 import React from 'react';
+import Loading from '@/components/atoms/Loading';
 
 type IProps = {
   exchangeListData: object[];
@@ -19,8 +20,8 @@ type SingleExchangeType = {
   array: object[];
 };
 const HomePage = ({ exchangeListData }: IProps) => {
-  return (
-    <>
+  if (exchangeListData) {
+    return (
       <SingleExchange>
         {exchangeListData.map(
           (singleExchange: SingleExchangeType | unknown) => {
@@ -34,8 +35,9 @@ const HomePage = ({ exchangeListData }: IProps) => {
           }
         )}
       </SingleExchange>
-    </>
-  );
+    );
+  }
+  return <Loading />;
 };
 
 export default HomePage;
