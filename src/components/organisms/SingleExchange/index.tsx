@@ -10,9 +10,9 @@ function SingleExchange({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="flex h-full w-full flex-col items-center gap-4 rounded-md border bg-gray-300 bg-opacity-30">
+    <div className="flex h-full w-full flex-col items-center gap-4 rounded-md">
       <h1 className="text-3xl">Exchange List</h1>
-      <div className="flex max-w-3xl flex-col gap-4">{children}</div>
+      <div className="flex max-w-4xl flex-col gap-4">{children}</div>
       {pageNumber ? (
         <div className="py-10 ">
           <Link href={pageNumber !== 2 ? `/exchanges/${pageNumber - 1}` : `/`}>
@@ -27,7 +27,7 @@ function SingleExchange({ children }: { children: React.ReactNode }) {
               >
                 <path
                   d="M6.18182 11.4205L5.01136 10.2614L8.51705 6.75568H0V5.0625H8.51705L5.01136 1.5625L6.18182 0.397727L11.6932 5.90909L6.18182 11.4205Z"
-                  fill="#666666"
+                  fill="#000"
                 />
               </svg>
             </button>
@@ -44,7 +44,7 @@ function SingleExchange({ children }: { children: React.ReactNode }) {
               >
                 <path
                   d="M6.18182 11.4205L5.01136 10.2614L8.51705 6.75568H0V5.0625H8.51705L5.01136 1.5625L6.18182 0.397727L11.6932 5.90909L6.18182 11.4205Z"
-                  fill="#666666"
+                  fill="#000"
                 />
               </svg>
             </button>
@@ -64,7 +64,7 @@ function SingleExchange({ children }: { children: React.ReactNode }) {
               >
                 <path
                   d="M6.18182 11.4205L5.01136 10.2614L8.51705 6.75568H0V5.0625H8.51705L5.01136 1.5625L6.18182 0.397727L11.6932 5.90909L6.18182 11.4205Z"
-                  fill="#666666"
+                  fill="#000"
                 />
               </svg>
             </button>

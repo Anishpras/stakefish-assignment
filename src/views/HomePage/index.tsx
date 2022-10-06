@@ -34,7 +34,6 @@ const HomePage = ({ exchangeListData }: IProps) => {
           }
         )}
       </SingleExchange>
-      
     </>
   );
 };

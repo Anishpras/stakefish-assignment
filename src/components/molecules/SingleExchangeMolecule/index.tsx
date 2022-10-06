@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 type SingleExchangeDataPropType = {
@@ -45,20 +46,22 @@ function SingleExchangeMolecule({
       <div className="flex w-80 flex-col items-center justify-center">
         <p>Name</p>
         <div className="p-7">
-          <h2 className="text-xl">{name}</h2>
+          <p className="text-center text-xl">{name}</p>
         </div>
       </div>
       <div className="flex w-56 flex-col items-center justify-center">
         <p>Country</p>
         <div className="p-7">
-          <p>{country}</p>
+          <p>{country === null ? `Not Available` : `${country}`}</p>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center">
         <p>Website</p>
-        <div className="p-7">
-          <a href={url} target="_blank" rel="noreferrer">
-            <p>
+        <div className="p-7 hover:cursor-pointer">
+          {url === null ? (
+            <p>Not Available</p>
+          ) : (
+            <Link href={url}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -73,8 +76,8 @@ function SingleExchangeMolecule({
                   d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
                 />
               </svg>
-            </p>
-          </a>
+            </Link>
+          )}
         </div>
       </div>
     </div>
