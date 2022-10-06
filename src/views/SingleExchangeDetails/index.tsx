@@ -1,6 +1,6 @@
-import BackToMain from '@/componentsatoms/BackToMain';
-import SingleExchangeDetail from '@/componentsorganisms/SingleExchangeDetail';
-import { calculateLinkToMainPage } from '@/libcalculateLinkToMainPage';
+import BackToMain from '@/components/atoms/BackToMain';
+import SingleExchangeDetail from '@/components/organisms/SingleExchangeDetail';
+import { calculateLinkToMainPage } from '@/lib/calculateLinkToMainPage';
 import React from 'react';
 
 type IProps = {
@@ -20,16 +20,17 @@ type IProps = {
 
 const SingleExchangeDetails = ({ singleExchangeDetailsResultData }: IProps) => {
   const { trust_score_rank } = singleExchangeDetailsResultData as IProps;
-  console.log(singleExchangeDetailsResultData);
   return (
-    <div>
-      <BackToMain link={calculateLinkToMainPage(trust_score_rank)} />
-      <h1>Single Exchange Details</h1>
-      <SingleExchangeDetail
-        singleExchangeDetailsResultData={
-          singleExchangeDetailsResultData as IProps
-        }
-      />
+    <div className="flex w-full max-w-5xl flex-col p-10">
+      <div className="w-full">
+        <BackToMain link={calculateLinkToMainPage(trust_score_rank)} />
+
+        <SingleExchangeDetail
+          singleExchangeDetailsResultData={
+            singleExchangeDetailsResultData as IProps
+          }
+        />
+      </div>
     </div>
   );
 };
