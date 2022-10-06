@@ -21,17 +21,17 @@ function SingleExchangeMolecule({
 }: IProps) {
   return (
     <a href={`/exchange/${id}`} target="_blank" rel="noreferrer noopener">
-      <div className="flex flex-col md:flex-row h-full w-full rounded-md border border-dashed border-black bg-gray-300 bg-opacity-30 p-4 hover:cursor-pointer">
-        <div className="flex md:flex-col items-center justify-center">
-          <p>Rank</p>
-          <div className="md:border-r-2  border-black p-4">
+      <div className="flex h-full w-full flex-col rounded-md border border-dashed border-black bg-gray-300 bg-opacity-30 p-4 hover:cursor-pointer md:flex-row">
+        <div className="flex items-center justify-center md:flex-col">
+          <p className="text-sm text-gray-600">Rank</p>
+          <div className="border-black  p-4 md:border-r-2 border-dashed">
             <div className="rounded-lg border border-dashed bg-white bg-opacity-70 p-4">
               <p>{trust_score_rank}</p>
             </div>
           </div>
         </div>
-        <div className="flex md:flex-col items-center justify-center">
-          <p>Logo</p>
+        <div className="flex items-center justify-center md:flex-col">
+          <p className="text-sm text-gray-600">Logo</p>
           <div className="p-[2.1rem]">
             <div className="h-6 w-6">
               <Image
@@ -44,20 +44,22 @@ function SingleExchangeMolecule({
             </div>
           </div>
         </div>
-        <div className="flex md:w-80 md:flex-col items-center justify-center">
-          <p>Name</p>
+        <div className="flex items-center justify-center md:w-80 md:flex-col">
+          <p className="text-sm text-gray-600">Name</p>
           <div className="p-7">
             <p className="text-center text-xl">{name}</p>
           </div>
         </div>
-        <div className="flex md:w-56 md:flex-col items-center justify-center">
-          <p>Country</p>
+        <div className="flex items-center justify-center md:w-56 md:flex-col">
+          <p className="text-sm text-gray-600">Country</p>
           <div className="p-7">
-            <p className='text-center'>{country === null ? `Not Available` : `${country}`}</p>
+            <p className="text-center">
+              {country === null ? `Not Available` : `${country}`}
+            </p>
           </div>
         </div>
-        <div className="flex md:flex-col items-center justify-center">
-          <p>Website</p>
+        <div className="flex items-center justify-center md:flex-col">
+          <p className="text-sm text-gray-600">Website</p>
           <div className="p-7 hover:cursor-pointer">
             {url === null ? (
               <p>Not Available</p>
