@@ -1,20 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-
-type SingleExchangeDataPropType = {
-  name: string;
-  id: string;
-  country: string;
-  url: string;
-  image: string;
-  trust_score_rank: number;
-};
-
-type IProps = {
-  key: string;
-  singleExchange: SingleExchangeDataPropType;
-};
+import { IProps } from './types';
 
 function SingleExchangeMolecule({
   singleExchange: { id, name, country, url, image, trust_score_rank },
@@ -24,7 +11,7 @@ function SingleExchangeMolecule({
       <div className="flex h-full w-full flex-col rounded-md border border-dashed border-black bg-gray-300 bg-opacity-30 p-4 hover:cursor-pointer md:flex-row">
         <div className="flex items-center justify-center md:flex-col">
           <p className="text-sm text-gray-600">Rank</p>
-          <div className="border-black  p-4 md:border-r-2 border-dashed">
+          <div className="border-dashed  border-black p-4 md:border-r-2">
             <div className="rounded-lg border border-dashed bg-white bg-opacity-70 p-4">
               <p>{trust_score_rank}</p>
             </div>

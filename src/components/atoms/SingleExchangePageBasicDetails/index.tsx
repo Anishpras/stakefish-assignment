@@ -1,9 +1,5 @@
 import React from 'react';
-
-type IProps = {
-  name: string;
-  value: string | number;
-};
+import { IProps } from './types';
 
 const SingleExchangePageBasicDetail = ({ name, value }: IProps) => {
   return (

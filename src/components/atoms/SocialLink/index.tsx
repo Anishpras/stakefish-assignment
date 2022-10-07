@@ -1,9 +1,5 @@
 import React from 'react';
-
-type IProps = {
-  name: string;
-  value: string;
-};
+import { IProps } from './types';
 
 const SocialLink = ({ value, name }: IProps) => {
   if (value) {

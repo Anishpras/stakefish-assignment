@@ -2,12 +2,9 @@ import BackArrowButton from '@/components/atoms/BackArrowButton';
 import ForwardArrowButton from '@/components/atoms/ForwardArrowButton';
 import Link from 'next/link';
 import React from 'react';
+import { IProps } from './types';
 
-type Props = {
-  pageNumber: number | undefined;
-};
-
-const PageChanger = ({ pageNumber }: Props) => {
+const PageChanger = ({ pageNumber }: IProps) => {
   if (pageNumber) {
     return (
       <div className="py-10 ">

@@ -2,23 +2,12 @@ import SingleExchange from '@/components/organisms/SingleExchange';
 import SingleExchangeMolecule from '@/components/molecules/SingleExchangeMolecule';
 import React from 'react';
 import Loading from '@/components/atoms/Loading';
+import {
+  IProps,
+  SingleExchangeDataObjectType,
+  SingleExchangeType,
+} from './types';
 
-type IProps = {
-  exchangeListData: object[];
-};
-type SingleExchangeDataObjectType = {
-  name: string;
-  id: string;
-  country: string;
-  url: string;
-  image: string;
-  trust_score_rank: number;
-};
-type SingleExchangeType = {
-  value: SingleExchangeDataObjectType;
-  index: number;
-  array: object[];
-};
 const HomePage = ({ exchangeListData }: IProps) => {
   if (exchangeListData) {
     return (

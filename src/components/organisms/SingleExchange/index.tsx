@@ -1,8 +1,9 @@
 import SingleExchangeTemplate from '@/components/template/SingleExchangeTemplate';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { IProps } from './types';
 
-function SingleExchange({ children }: { children: React.ReactNode }) {
+function SingleExchange({ children }: IProps) {
   const router = useRouter();
   let pageNumber;
   if (router.query.page !== undefined) {

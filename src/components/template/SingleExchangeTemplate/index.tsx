@@ -1,10 +1,6 @@
 import PageChanger from '@/components/molecules/PageChanger';
 import React from 'react';
-
-type IProps = {
-  children: React.ReactNode;
-  pageNumber: number | undefined;
-};
+import { IProps } from './types';
 
 const SingleExchangeTemplate = ({ children, pageNumber }: IProps) => {
   return (

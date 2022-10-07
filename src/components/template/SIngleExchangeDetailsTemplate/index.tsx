@@ -1,8 +1,6 @@
 import React from 'react';
+import { IProps } from './types';
 
-type IProps = {
-  children: React.ReactNode;
-};
 
 const SingleExchangeDetailsTemplate = ({ children }: IProps) => {
   return (

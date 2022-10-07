@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
+import { IProps } from './types';
 
-const BackToMain = ({ link }: { link: string }) => {
+const BackToMain = ({ link }:IProps) => {
   return (
     <div className="container flex max-w-5xl items-start">
       <Link href={link}>
