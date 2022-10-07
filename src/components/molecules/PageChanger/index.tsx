@@ -11,6 +11,7 @@ const PageChanger = ({ pageNumber }: Props) => {
   if (pageNumber) {
     return (
       <div className="py-10 ">
+        {/* Logic for returning to previous page. */}
         <Link href={pageNumber !== 2 ? `/exchanges/${pageNumber - 1}` : `/`}>
           <button className="mx-4 rounded-lg bg-gray-200 p-2 ">
             <BackArrowButton />
