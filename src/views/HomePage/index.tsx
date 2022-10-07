@@ -7,9 +7,10 @@ import {
   SingleExchangeDataObjectType,
   SingleExchangeType,
 } from './types';
+import EmptyList from '@/components/template/EmptyList';
 
 const HomePage = ({ exchangeListData }: IProps) => {
-  if (exchangeListData) {
+  if (exchangeListData.length != 0) {
     return (
       <SingleExchange>
         {exchangeListData.map(
@@ -25,6 +26,9 @@ const HomePage = ({ exchangeListData }: IProps) => {
         )}
       </SingleExchange>
     );
+  }
+  if (exchangeListData.length === 0) {
+    return <EmptyList />;
   }
   return <Loading />;
 };
