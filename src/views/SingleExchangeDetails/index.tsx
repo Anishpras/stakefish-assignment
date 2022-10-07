@@ -3,6 +3,7 @@ import SingleExchangeDetail from '@/components/organisms/SingleExchangeDetail';
 import Loading from '@/components/atoms/Loading';
 import { calculateLinkToMainPage } from '@/lib/calculateLinkToMainPage';
 import React from 'react';
+import SingleExchangeDetailsTemplate from '@/components/template/SIngleExchangeDetailsTemplate';
 
 type IProps = {
   name: string;
@@ -23,17 +24,15 @@ const SingleExchangeDetails = ({ singleExchangeDetailsResultData }: IProps) => {
   const { trust_score_rank } = singleExchangeDetailsResultData as IProps;
   if (singleExchangeDetailsResultData) {
     return (
-      <div className="flex w-full max-w-5xl flex-col p-10">
-        <div className="w-full">
-          <BackToMain link={calculateLinkToMainPage(trust_score_rank)} />
+      <SingleExchangeDetailsTemplate>
+        <BackToMain link={calculateLinkToMainPage(trust_score_rank)} />
 
-          <SingleExchangeDetail
-            singleExchangeDetailsResultData={
-              singleExchangeDetailsResultData as IProps
-            }
-          />
-        </div>
-      </div>
+        <SingleExchangeDetail
+          singleExchangeDetailsResultData={
+            singleExchangeDetailsResultData as IProps
+          }
+        />
+      </SingleExchangeDetailsTemplate>
     );
   }
   return <Loading />;
